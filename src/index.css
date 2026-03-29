@@ -1,0 +1,269 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #0f172a;
+  background-color: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #0f172a;
+  color: #fff;
+}
+
+.brand {
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.45rem;
+  transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: #1e293b;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.page-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.page-header p {
+  margin: 0;
+  color: #475569;
+}
+
+.hero-home {
+  display: flex;
+}
+
+.hero-card,
+.panel,
+.login-form {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.hero-card {
+  width: 100%;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-card h2 {
+  margin: 0;
+}
+
+.hero-card p {
+  margin: 0;
+  color: #334155;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.btn-link,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0.55rem;
+  padding: 0.62rem 0.95rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  background-color: #2563eb;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-link.secondary,
+.btn-secondary {
+  background: #cbd5e1;
+  color: #0f172a;
+}
+
+.btn-danger {
+  background: #dc2626;
+}
+
+.login-wrapper {
+  display: flex;
+}
+
+.login-form {
+  width: min(500px, 100%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.dashboard-tools {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dashboard-grid {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.panel {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.panel h2 {
+  margin: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1 1 220px;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.full {
+  flex-basis: 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.55rem;
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+}
+
+.form-actions,
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.65rem;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.contact-card h3 {
+  margin: 0;
+}
+
+.contact-card p {
+  margin: 0;
+  color: #334155;
+}
+
+.empty-state {
+  border: 1px dashed #94a3b8;
+  border-radius: 0.6rem;
+  padding: 0.9rem;
+  color: #334155;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-content {
+    padding: 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.6rem;
+  }
+}
